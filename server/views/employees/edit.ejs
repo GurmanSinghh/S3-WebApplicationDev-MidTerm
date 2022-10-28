@@ -1,0 +1,71 @@
+//Gurman Singh 301183986 COMP229 Midterm
+<% include ../partials/header.ejs %>
+
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6"></div>
+        <h1><%= title %></h1>
+
+        <form class="form" method="POST">
+            <div class="form-group">
+                <label for="nameTextField">ID</label>
+                <input type="number" class="form-control"
+                id="idTextField"
+                placeholder="Enter Employee ID"
+                name="id" 
+                value="<%= Employee.id %>"
+                required>
+            </div>
+
+            <div class="form-group">
+                <label for="nameTextField">Employee Name</label>
+                <input type="text" class="form-control"
+                id="nameTextField"
+                placeholder="Enter Employee Name"
+                name="name" 
+                value="<%= Employee.name %>"
+                required>
+            </div>
+
+            <div class="form-group">
+                <label for="departmentTextField">Department</label>
+                <input type="text" class="form-control"
+                id="deepartmentTextField"
+                placeholder="Enter Employee Department"
+                name="department" 
+                value="<%= Employee.department %>"
+                required>
+
+                <div class="form-group">
+                    <label for="designationTextField">Designation</label>
+                    <input type="text" class="form-control"
+                    id="designationTextField"
+                    placeholder="Enter Employee Designation"
+                    name="designation" 
+                    value="<%= Employee.designation %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="salaryTextField">Salary</label>
+                    <input type="number" class="form-control"
+                    id="salaryTextField"
+                    placeholder="Enter Employee Salary"
+                    name="salary" 
+                    value="<%= Employee.salary %>"
+                    required>
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i>Submit
+                </button>
+
+                <a href="/employees" class="btn btn-warning">
+                    <i class="fas fa-undo"></i>Cancel
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<% include ../partials/footer.ejs %>
